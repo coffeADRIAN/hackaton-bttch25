@@ -1,11 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Asistente de Riesgo Mecánico - Traxión Tech</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+
+<div class="container">
+    <header>
+        <h1>Asistente de Riesgo Mecánico (IA)</h1>
+        <p>Reporte de Incidencias y Diagnóstico Preventivo</p>
+    </header>
+
+    <section id="registro">
+        <div class="form-group">
+            <label>ID de la Unidad / Placas:</label>
+            <input type="text" placeholder="Ej. TR-542" value="TX-2025-F">
+        </div>
+
+        <div class="form-group">
+            <label>Descripción del síntoma (¿Qué notas en el vehículo?):</label>
+            <textarea rows="3" placeholder="Describe la falla...">Estoy manejando y no sirven los frenos de mi coche.</textarea>
+        </div>
+
+        <button class="btn-simular">Analizar con IA</button>
+    </section>
+
+    <section class="resultado-ia">
+        <h2>Análisis de la IA <span class="status-badge">Riesgo Alto</span></h2>
+        <p><strong>Tipo de incidencia:</strong> Falla mecánica crítica – Sistema de frenos</p>
+        
+        <div class="acciones">
+            <strong>Acciones Inmediatas:</strong>
+            <ul>
+                <li>Detener el vehículo de forma segura lo antes posible.</li>
+                <li>Activar luces de emergencia.</li>
+                <li>Solicitar asistencia mecánica inmediata.</li>
+            </ul>
+        </div>
+
+        <p><small><em>Nota: Este es un diagnóstico basado en reglas predefinidas para el prototipo.</em></small></p>
+    </section>
+</div>
+
 </body>
 </html>

@@ -1,3 +1,81 @@
 html{
     scroll-behavior: smooth; /* Permite un desplazamiento suave entre secciones */
 }
+:root {
+            --primary: #003366; /* Azul corporativo */
+            --danger: #d9534f;
+            --warning: #f0ad4e;
+            --light: #f4f7f6;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--light);
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        header {
+            border-bottom: 2px solid var(--primary);
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+        }
+
+        h1 { color: var(--primary); font-size: 24px; }
+
+        .form-group { margin-bottom: 15px; }
+
+        label { display: block; font-weight: bold; margin-bottom: 5px; }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .btn-simular {
+            background-color: var(--primary);
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        /* Simulación de Resultado de IA */
+        .resultado-ia {
+            margin-top: 30px;
+            padding: 20px;
+            border-left: 5px solid var(--danger);
+            background-color: #fff5f5;
+        }
+
+        .status-badge {
+            background: var(--danger);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+
+        .acciones {
+            background: #fff;
+            padding: 15px;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
