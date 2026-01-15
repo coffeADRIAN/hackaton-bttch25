@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Agente de Riesgo Mecánico</title>
+</head>
+<body>
+
+<header>
+    <div class="header-content">
+        <i class="fas fa-tools"></i>
+        <h1>Agente de Evaluación de Riesgo Mecánico</h1>
+        <p>Evalúa el riesgo de tu vehículo de forma inteligente</p>
+    </div>
+    <nav>
+        <a href="#inicio"><i class="fas fa-home"></i> Inicio</a> |
+        <a href="#como-funciona"><i class="fas fa-cogs"></i> Cómo funciona</a> |
+        <a href="#contacto"><i class="fas fa-envelope"></i> Contacto</a>
+    </nav>
+</header>
+
+<main class="start" id="inicio">
+
+    <section class="intro">
+        <h2><i class="fas fa-info-circle"></i> Describe la falla del vehículo</h2>
+        <p>
+            Nuestro agente de IA evalúa el <strong>riesgo mecánico</strong> y recomienda
+            <em>acciones inmediatas y preventivas</em> para tu seguridad.
+        </p>
+    </section>
+
+    <section class="form-section">
+        <h2><i class="fas fa-clipboard-list"></i> Formulario de Evaluación</h2>
+        <form id="riskForm">
+            <div class="form-group">
+                <label for="tipoVehiculo"><i class="fas fa-car"></i> Tipo de vehículo:</label>
+                <select id="tipoVehiculo" required>
+                    <option value="">Selecciona...</option>
+                    <option value="auto">Automóvil</option>
+                    <option value="camioneta">Camioneta</option>
+                    <option value="camion">Camión</option>
+                    <option value="moto">Motocicleta</option>
+                    <option value="otro">Otro</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="falla"><i class="fas fa-exclamation-triangle"></i> ¿Qué está ocurriendo?</label>
+
+                <textarea id="falla" rows="4" placeholder="Ejemplo: No sirven los frenos, humo del motor, etc." required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="velocidad"><i class="fas fa-tachometer-alt"></i> Velocidad aproximada (km/h):</label>
+                <input type="number" id="velocidad" min="0" required>
+            </div>
+
+            <div class="form-group">
+                <label for="mantenimiento"><i class="fas fa-calendar-alt"></i> ¿Hace cuánto fue el último mantenimiento? (meses)</label>
+                <input type="number" id="mantenimiento" min="0" required>
+            </div>
+
+            <div class="form-group">
+                <label for="clima"><i class="fas fa-cloud-sun"></i> Condiciones climáticas:</label>
+                <select id="clima">
+                    <option value="bueno">Buenas</option>
+                    <option value="lluvia">Lluvia</option>
+                    <option value="nieve">Nieve/Hielo</option>
+                    <option value="viento">Viento fuerte</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label><i class="fas fa-gauge-high"></i> Severidad percibida:</label>
+                <div class="radio-group">
+                    <input type="radio" id="severidad-baja" name="severidad" value="baja" checked>
+                    <label for="severidad-baja">Baja</label>
+                    <input type="radio" id="severidad-media" name="severidad" value="media">
+                    <label for="severidad-media">Media</label>
+                    <input type="radio" id="severidad-alta" name="severidad" value="alta">
+                    <label for="severidad-alta">Alta</label>
+                </div>
+            </div>
+
+            <button type="submit"><i class="fas fa-search"></i> Evaluar riesgo</button>
+            <button type="reset"><i class="fas fa-undo"></i> Limpiar</button>
+        </form>
+    </section>
+
+    <section id="resultado" class="resultado hidden">
+        <h2><i class="fas fa-chart-line"></i> Resultado de la Evaluación</h2>
+        <!-- Aquí aparece la respuesta del agente -->
+    </section>
+
+    <section id="como-funciona">
+        <h2><i class="fas fa-question-circle"></i> Cómo funciona</h2>
+        <p>Completa el formulario con los detalles de la falla. Nuestro algoritmo analiza los datos y proporciona una evaluación de riesgo con recomendaciones específicas.</p>
+
+        <ul>
+            <li><strong>Descripción:</strong> Detalla lo que ocurre con tu vehículo.</li>
+            <li><strong>Velocidad:</strong> Ayuda a determinar el peligro inmediato.</li>
+            <li><strong>Mantenimiento:</strong> Indica el estado general del vehículo.</li>
+            <li><strong>Clima y severidad:</strong> Factores adicionales que afectan el riesgo.</li>
+        </ul>
+    </section>
+
+    <section id="contacto">
+        <h2><i class="fas fa-envelope"></i> Contacto</h2>
+        <p>Para más información o soporte, contáctanos:</p>
+        <p><i class="fas fa-phone"></i> Teléfono: +1 234 567 890</p>
+        <p><i class="fas fa-envelope"></i> Email: soporte@riesgomechanico.com</p>
+        <p><i class="fas fa-map-marker-alt"></i> Dirección: Calle Ficticia 123, Ciudad</p>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2025 Agente de Riesgo Mecánico – Hackathon Bécalos</p>
+    <p><i class="fas fa-shield-alt"></i> Para uso informativo. Consulta a un profesional para reparaciones.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+
